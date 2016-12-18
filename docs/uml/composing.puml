@@ -1,0 +1,39 @@
+@startuml
+title Original Trait Composition
+Actor client
+client->pytraits.traits_composer.py: add_traits(target, traits)
+pytraits.traits_composer.py->Traits: compose(target, resolutions)
+
+loop all traits
+    Traits->Composer: compose(resolutions)
+    Composer->Resolutions: resolve(trait.name)
+    Composer->TraitSource: recompile(target, name)
+    Composer->TraitSource: rebind(target, compiled_trait)
+    Composer->TraitTarget: setitem(name, rebound_trait)
+    Composer-->Traits
+end
+
+Traits-->pytraits.traits_composer.py
+pytraits.traits_composer.py-->client
+@enduml
+
+
+@startuml
+title Refactored Trait Composition
+Actor client
+client->pytraits.traits_composer.py: add_traits(target, traits)
+
+loop all traits
+    pytraits.traits_composer.py->Traits: next()
+    pytraits.traits_composer.py->Composer: compose(target: TraitTarget, trait: TraitSource, resolutions)
+
+    Composer->Resolutions: resolve(name)
+    Composer->Compiler: recompile(target, trait)
+    Composer->Binder: rebind(target, compiled_trait, name)
+    Binder->TraitTarget: setattr(rebound_trait, name)
+    note over Composer: Should the compiled trait be returned here??
+    Composer-->pytraits.traits_composer.py
+end
+
+pytraits.traits_composer.py-->client
+@enduml

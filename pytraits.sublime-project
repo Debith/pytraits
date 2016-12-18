@@ -1,0 +1,25 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"build_systems": [{
+		"name": "Python 2.7 - traits",
+	    "cmd": ["c:/Python27/python.exe", "-u", "$file"],
+	    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+	    "selector": "source.python",
+	    "env": {
+			"PYTHONPATH": "C:\\Users\\teppo\\Documents\\Projects\\pytraits\\src"
+		}
+	}, {
+		"name": "Python 3.5 - traits",
+	    "cmd": ["c:/Python35/python.exe", "-u", "$file"],
+	    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+	    "selector": "source.python",
+	    "env": {
+			"PYTHONPATH": "C:\\Users\\teppo\\Documents\\Projects\\pytraits\\src"
+		}
+	}]
+}
