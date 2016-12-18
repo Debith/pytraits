@@ -17,6 +17,5 @@
 '''
 
 import pytraits.domain.services.compiler  # NOQA
-import pytraits.domain.services.resolutions  # NOQA
 import pytraits.domain.services.traits  # NOQA
 import pytraits.domain.services.composer  # NOQA

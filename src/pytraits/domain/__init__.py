@@ -13,11 +13,11 @@ from pytraits.domain.model.routine_object import (FunctionObject,
                                                        ClassMethodObject,
                                                        StaticMethodObject,
                                                        BuiltinObject)
+from pytraits.domain.model.resolutions import Resolutions
 from pytraits.domain.model.trait_object import TraitObject
 
 from pytraits.domain.services.compiler import Compiler
 from pytraits.domain.services.composer import Composer
-from pytraits.domain.services.resolutions import Resolutions
 from pytraits.domain.services.traits import Traits
 
 # TODO: Create a base class for all these domain classes.
