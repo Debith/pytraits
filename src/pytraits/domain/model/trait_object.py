@@ -20,10 +20,10 @@ from __future__ import absolute_import, division, print_function
 
 __metaclass__ = type
 
-class TraitObject:
+class Hookable:
     def __init__(self, object):
         assert object is not None
-        assert not isinstance(object, TraitObject), "Detected nesting"
+        assert not isinstance(object, Hookable), "Detected nesting"
 
         self._object = object
         self._compiler = self.FACTORY["Compiler"]()

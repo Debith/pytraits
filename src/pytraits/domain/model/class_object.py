@@ -18,11 +18,11 @@
 
 from __future__ import absolute_import, division, print_function
 from pytraits.infrastructure.utils import is_sysname
-from .trait_object import TraitObject
+from .trait_object import Hookable
 
 __metaclass__ = type
 
-class ClassObject(TraitObject):
+class ClassObject(Hookable):
     INSPECTORS = ('source', 'target')
 
     def __iter__(self):

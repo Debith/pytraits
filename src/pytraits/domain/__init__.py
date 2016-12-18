@@ -14,14 +14,14 @@ from pytraits.domain.model.routine_object import (FunctionObject,
                                                        StaticMethodObject,
                                                        BuiltinObject)
 from pytraits.domain.model.resolutions import Resolutions
-from pytraits.domain.model.trait_object import TraitObject
+from pytraits.domain.model.trait_object import Hookable
 
 from pytraits.domain.services.compiler import Compiler
 from pytraits.domain.services.composer import Composer
 from pytraits.domain.services.traits import Traits
 
 # TODO: Create a base class for all these domain classes.
-TraitObject.FACTORY = TraitFactory()
+Hookable.FACTORY = TraitFactory()
 Compiler.FACTORY = TraitFactory()
 Composer.FACTORY = TraitFactory()
 Traits.FACTORY = TraitFactory()
@@ -36,7 +36,7 @@ PRIMITIVES = (ClassObject,
     StaticMethodObject,
     BuiltinObject, )
 
-assert id(TraitObject.FACTORY) == id(Compiler.FACTORY)
+assert id(Hookable.FACTORY) == id(Compiler.FACTORY)
 
 if not TraitFactory().exists(Traits):
     # TODO: Refactor to be more automatic

@@ -47,7 +47,7 @@ class Composer:
 
     def __call__(self, target, source):
         """ Factory method that selects correct composer for target and source. """
-        # Each TraitObject has a string representation that can be used to
+        # Each Hookable has a string representation that can be used to
         # select correct composer.
         joined = str(target), str(source)
         try:

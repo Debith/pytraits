@@ -18,11 +18,11 @@
 
 from __future__ import absolute_import, division, print_function
 from pytraits.infrastructure.utils import get_func_name
-from .trait_object import TraitObject
+from .trait_object import Hookable
 
 __metaclass__ = type
 
-class FunctionObject(TraitObject):
+class FunctionObject(Hookable):
     """ This class encapsulates handling of function objects.
 
     Generally, there's no functions in terms of traits. Functions are turned to
@@ -57,7 +57,7 @@ class FunctionObject(TraitObject):
             return StaticMethodObject(object)
 
 
-class RoutineObject(TraitObject):
+class RoutineObject(Hookable):
     INSPECTORS = ('source',)
 
     @property

@@ -17,11 +17,11 @@
 '''
 
 from __future__ import absolute_import, division, print_function
-from .trait_object import TraitObject
+from .trait_object import Hookable
 
 __metaclass__ = type
 
-class PropertyObject(TraitObject):
+class PropertyObject(Hookable):
     INSPECTORS = ('source',)
 
     def __init__(self, property, name=None):
