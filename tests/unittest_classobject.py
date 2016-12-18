@@ -4,7 +4,7 @@
 from __future__ import absolute_import, division, print_function
 import unittest
 
-from pytraits.core.utils import flatten
+from pytraits.infrastructure.utils import flatten
 from pytraits.domain.primitives.class_object import ClassObject
 
 from testdata import *

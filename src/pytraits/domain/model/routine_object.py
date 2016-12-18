@@ -17,7 +17,7 @@
 '''
 
 from __future__ import absolute_import, division, print_function
-from pytraits.core.utils import get_func_name
+from pytraits.infrastructure.utils import get_func_name
 from .trait_object import TraitObject
 
 __metaclass__ = type

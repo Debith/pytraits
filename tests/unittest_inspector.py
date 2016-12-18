@@ -5,7 +5,7 @@ from __future__ import absolute_import, division, print_function
 import unittest
 from collections import OrderedDict as odict
 
-from pytraits.core.inspector import Inspector
+from pytraits.infrastructure.inspector import Inspector
 
 from utils import for_examples
 from testdata import *

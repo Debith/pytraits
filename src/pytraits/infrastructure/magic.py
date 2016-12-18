@@ -33,8 +33,8 @@ elif (3, 3) <= sys.version_info < (3, 5):
 else:
     import imp
 
-from pytraits.core.inspector import inspector
-from pytraits.core.utils import is_sysname
+from pytraits.infrastructure.inspector import inspector
+from pytraits.infrastructure.utils import is_sysname
 
 
 __metaclass__ = type

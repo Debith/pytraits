@@ -17,9 +17,9 @@
 '''
 
 from __future__ import absolute_import, division, print_function
-from pytraits.core.inspector import Inspector
-from pytraits.core.singleton import Singleton
-from pytraits.core.magic import meta_make
+from pytraits.infrastructure.inspector import Inspector
+from pytraits.infrastructure.singleton import Singleton
+from pytraits.infrastructure.magic import meta_make
 __metaclass__ = type
 
 

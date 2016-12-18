@@ -6,7 +6,7 @@ import unittest
 
 from utils import for_examples
 
-from pytraits.core.utils import get_func_name
+from pytraits.infrastructure.utils import get_func_name
 from pytraits.domain.composing.composer import BasicComposer
 from pytraits.domain.composing.resolutions import Resolutions
 

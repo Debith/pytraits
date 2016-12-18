@@ -5,7 +5,7 @@ from __future__ import absolute_import, division, print_function
 import unittest
 
 from pytraits import Singleton, SingletonError
-from pytraits.core.magic import meta_make
+from pytraits.infrastructure.magic import meta_make
 
 __metaclass__ = type
 

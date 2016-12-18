@@ -17,7 +17,7 @@
 '''
 
 from __future__ import absolute_import, division, print_function
-from pytraits.core.utils import is_sysname
+from pytraits.infrastructure.utils import is_sysname
 from .trait_object import TraitObject
 
 __metaclass__ = type

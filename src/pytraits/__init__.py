@@ -16,8 +16,8 @@
    limitations under the License.
 '''
 
-from pytraits.core.singleton import Singleton, SingletonError
-from pytraits.core.factory import Factory, FactoryError, FactoryRegisterError, FactoryClassMissingError
+from pytraits.infrastructure.singleton import Singleton, SingletonError
+from pytraits.infrastructure.factory import Factory, FactoryError, FactoryRegisterError, FactoryClassMissingError
 from pytraits.combiner import combine_class
 from pytraits.extendable import extendable
 from pytraits.setproperty import setproperty

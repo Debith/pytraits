@@ -23,7 +23,7 @@ import sys
 import types
 import collections
 
-from pytraits.core.utils import is_sysname
+from pytraits.infrastructure.utils import is_sysname
 
 __metaclass__ = type
 

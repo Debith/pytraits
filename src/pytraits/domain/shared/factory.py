@@ -17,8 +17,8 @@
 '''
 
 from __future__ import absolute_import, division, print_function
-from pytraits.core.factory import Factory, FactoryMeta
-from pytraits.core.magic import meta_make
+from pytraits.infrastructure.factory import Factory, FactoryMeta
+from pytraits.infrastructure.magic import meta_make
 
 __metaclass__ = type
 

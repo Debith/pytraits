@@ -19,8 +19,8 @@
 from __future__ import absolute_import, division, print_function
 import inspect
 
-from pytraits.core.singleton import Singleton
-from pytraits.core.magic import meta_make
+from pytraits.infrastructure.singleton import Singleton
+from pytraits.infrastructure.magic import meta_make
 
 __metaclass__ = type
 __all__ = ["Factory"]

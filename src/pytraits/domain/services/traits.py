@@ -19,8 +19,8 @@
 from __future__ import absolute_import, division, print_function
 import inspect
 
-from pytraits.core.utils import flatten, is_container
-from pytraits.core.inspector import inspector
+from pytraits.infrastructure.utils import flatten, is_container
+from pytraits.infrastructure.inspector import inspector
 
 __metaclass__ = type
 
