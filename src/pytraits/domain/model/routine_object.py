@@ -18,7 +18,8 @@
 
 from __future__ import absolute_import, division, print_function
 from pytraits.infrastructure.utils import get_func_name
-from .trait_object import Hookable
+from ..shared.trait_object import TraitObject
+from .hookable import Hookable
 
 __metaclass__ = type
 
@@ -57,7 +58,8 @@ class FunctionObject(Hookable):
             return StaticMethodObject(object)
 
 
-class RoutineObject(Hookable):
+class RoutineObject(TraitObject, Hookable):
+    DEPENDENCIES = dict(_compiler="Compiler")
     INSPECTORS = ('source',)
 
     @property

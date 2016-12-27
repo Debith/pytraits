@@ -48,7 +48,7 @@ def add_traits(target, *traits, **resolutions):
         return
 
     # TODO: DI here
-    trait_target = TraitFactory["TraitTargetInspector"](target)
+    trait_target = TraitFactory["TraitTargetInspector"]().inspect(target)
     trait_resolutions = TraitFactory["Resolutions"](resolutions)
 
     # Just prepare object to start the work and get done with it.

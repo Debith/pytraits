@@ -129,12 +129,8 @@ class Inspector:
     """ Class for inspecting objects.
 
     This class can be used to identify type of objects passed in. For that
-    purpose, the inspector provides 'inspect' and 'inspect_many' functions
-    as well as the instance is directly callable for inspecting single object.
+    purpose, the inspector provides 'inspect' and 'inspect_many' functions.
 
-    >>> inspector = Inspector()
-    >>> inspector(Inspector) == 'class'
-    True
     >>> inspector.inspect(inspector) == 'instance'
     True
     >>> inspector.inspect_many(inspect, min) == [u'module', u'builtin']
@@ -233,7 +229,7 @@ class Inspector:
             if typename not in self.typenames:
                 raise TypeError("Unidentified type '%s'" % typename)
 
-            return lambda obj: self(obj) == typename
+            return lambda obj: self.inspect(obj) == typename
 
     def inspect_many(self, *objects):
         """ Identify all arguments to certain type.
@@ -286,8 +282,6 @@ class Inspector:
 
         type_name = getattr(object, "__name__", object.__class__.__name__)
         raise TypeError("Could not identify object '%s' from list: %s" % (type_name, self.typenames))
-
-    __call__ = inspect
 
     def add_typecheck(self, name, callable=None):
         """ Adds typecheck for given name.

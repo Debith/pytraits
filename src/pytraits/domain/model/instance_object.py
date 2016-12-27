@@ -18,18 +18,20 @@
 
 from __future__ import absolute_import, division, print_function
 from pytraits.infrastructure.utils import is_sysname
-from .trait_object import Hookable
+from .hookable import Hookable
+from ..shared.trait_object import TraitObject
 
 __metaclass__ = type
 
-class InstanceObject(Hookable):
+class InstanceObject(TraitObject, Hookable):
+    DEPENDENCIES = dict(_inspector="TraitSourceInspector")
     INSPECTORS = ('source', 'target')
 
     def __iter__(self):
         """ Yields each element in the class. """
         for name, object in self.items():
             try:
-                yield self.FACTORY["TraitSourceInspector"](object)
+                yield self._inspector.inspect(object)
             except TypeError:
                 pass
 

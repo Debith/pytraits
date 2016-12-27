@@ -19,6 +19,7 @@
 from __future__ import absolute_import, division, print_function
 import inspect
 
+from pytraits.domain.shared.trait_object import TraitObject
 from pytraits.infrastructure.utils import flatten, is_container
 from pytraits.infrastructure.inspector import inspector
 
@@ -28,7 +29,9 @@ __metaclass__ = type
 class FirstTraitArgumentError(Exception): pass
 class TraitArgumentTypeError(Exception): pass
 
-class Traits:
+class Traits(TraitObject):
+    DEPENDENCIES = dict(_composer="Composer", _inspector="TraitSourceInspector")
+
     """ This class encapsulates handling of multiple traits. """
     def __init__(self, traits):
         assert is_container(traits)
@@ -88,12 +91,10 @@ class Traits:
 
         Any class source is walked through for its contents.
         """
-        TraitSource = self.FACTORY["TraitSourceInspector"]
-
-        for trait in flatten(map(TraitSource, self.__traits)):
+        for trait in flatten(map(self._inspector.inspect, self.__traits)):
             yield trait
 
     def compose(self, target, resolutions):
         """ Compose trait sources to target using composer. """
         for source in self:
-            self.FACTORY["Composer"](target, source).compose(resolutions)
+            self._composer(target, source).compose(resolutions)

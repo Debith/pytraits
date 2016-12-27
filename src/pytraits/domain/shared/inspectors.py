@@ -36,7 +36,7 @@ class TraitInspector:
     def __init__(self, *args, **kwargs):
         self.__inspector = Inspector()
 
-    def __call__(self, object):
+    def inspect(self, object):
         return self.__inspector.inspect(object)
 
     @classmethod

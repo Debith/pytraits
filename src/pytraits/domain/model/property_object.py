@@ -17,11 +17,13 @@
 '''
 
 from __future__ import absolute_import, division, print_function
-from .trait_object import Hookable
+from ..shared.trait_object import TraitObject
+from .hookable import Hookable
 
 __metaclass__ = type
 
-class PropertyObject(Hookable):
+class PropertyObject(TraitObject, Hookable):
+    DEPENDENCIES = dict(_compiler="Compiler", _inspector="TraitSourceInspector")
     INSPECTORS = ('source',)
 
     def __init__(self, property, name=None):
@@ -29,13 +31,11 @@ class PropertyObject(Hookable):
 
         self.__property = property
         self.__name = name
-        self.__compiler = self.FACTORY["Compiler"]()
-        self.__inspector = self.FACTORY["TraitSourceInspector"]
 
     def get_func(self, func_name):
         func = getattr(self.__property, func_name, None)
         if func:
-            return self.__inspector(func)
+            return self._inspector.inspect(func)
 
     @property
     def name(self):

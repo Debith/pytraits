@@ -18,32 +18,20 @@
 
 from __future__ import absolute_import, division, print_function
 
+import abc
+
+from pytraits.infrastructure.magic import meta_make
 __metaclass__ = type
 
-class Hookable:
-    def __init__(self, object):
-        assert object is not None
-        assert not isinstance(object, Hookable), "Detected nesting"
 
-        self._object = object
-        self._compiler = self.FACTORY["Compiler"]()
+class TraitObject:
+   """ Shared base class for all domain objects.
 
-    @classmethod
-    def __str__(cls):
-        return cls.__name__.lower().replace('object', '')
+   """
+   # Property each object must explicitly overide, regardless there are
+   # any dependencies or not.
+   DEPENDENCIES = abc.abstractproperty
 
-    @classmethod
-    def hook_into(cls, inspector):
-        if inspector.TYPE in cls.INSPECTORS:
-            inspector.add_hook(cls.__str__(), cls)
 
-    @property
-    def object(self):
-        return self._object
+TraitObject = meta_make(TraitObject, abc.ABCMeta)
 
-    @property
-    def qualname(self):
-        try:
-            return self._object.__qualname__
-        except AttributeError:
-            return type(self._object).__name__

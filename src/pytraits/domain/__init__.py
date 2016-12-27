@@ -14,17 +14,13 @@ from pytraits.domain.model.routine_object import (FunctionObject,
                                                        StaticMethodObject,
                                                        BuiltinObject)
 from pytraits.domain.model.resolutions import Resolutions
-from pytraits.domain.model.trait_object import Hookable
 
 from pytraits.domain.services.compiler import Compiler
 from pytraits.domain.services.composer import Composer
 from pytraits.domain.services.traits import Traits
 
 # TODO: Create a base class for all these domain classes.
-Hookable.FACTORY = TraitFactory()
-Compiler.FACTORY = TraitFactory()
-Composer.FACTORY = TraitFactory()
-Traits.FACTORY = TraitFactory()
+factory = TraitFactory()
 
 PRIMITIVES = (ClassObject,
     InstanceObject,
@@ -36,16 +32,30 @@ PRIMITIVES = (ClassObject,
     StaticMethodObject,
     BuiltinObject, )
 
-assert id(Hookable.FACTORY) == id(Compiler.FACTORY)
+INJECTANBLES = PRIMITIVES + (Traits, RoutineObject)
+
+class DomainError(Exception): pass
 
 if not TraitFactory().exists(Traits):
     # TODO: Refactor to be more automatic
+    # TODO: Injecting should know difference between factory and service, so that no need
+    #       to do decisions here.
+    TraitFactory.register(TraitSourceInspector, TraitTargetInspector, Composer, autoinit=False)
+    TraitFactory.register(*PRIMITIVES)
+    TraitFactory.register(Compiler, Resolutions, Traits)
+
     for primitive in PRIMITIVES:
         primitive.hook_into(TraitSourceInspector)
         primitive.hook_into(TraitTargetInspector)
 
-    TraitFactory.register(TraitSourceInspector, TraitTargetInspector)
-    TraitFactory.register(*PRIMITIVES)
-    TraitFactory.register(Compiler, Composer, Resolutions, Traits)
+    for injectable in INJECTANBLES:
+        deps = getattr(injectable, "DEPENDENCIES", {}) or {}
+        for name, dep in deps.items():
+            try:
+                setattr(injectable, name, factory[dep]())
+            except:
+                print(factory[dep])
+                raise DomainError("Error when injecting '%s' dependency to '%s'" % (dep, injectable))
+
 
 __all__ = ["TraitFactory"]
