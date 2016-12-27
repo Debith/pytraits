@@ -5,11 +5,12 @@ from __future__ import absolute_import, division, print_function
 import unittest
 
 from pytraits.infrastructure.utils import flatten
-from pytraits.domain.primitives.class_object import ClassObject
+from pytraits.domain.model.class_object import ClassObject
 
 from testdata import *
 
 __metaclass__ = type
+
 
 class TestClassObject(unittest.TestCase):
     def setUp(self):
@@ -22,10 +23,6 @@ class TestClassObject(unittest.TestCase):
 
     def typename(self, key):
         return type(self[key]).__name__
-
-    @property
-    def iterated(self):
-        return list(self.classtype)
 
     def test_has_a_custom_dir(self):
         self.assertEqual(self.dir,
@@ -40,16 +37,12 @@ class TestClassObject(unittest.TestCase):
         self.assertEqual(self.typename("test_staticmethod"), "staticmethod")
 
     def test_supports_iteration(self):
-        iterated = sorted([str(f) for f in self.iterated])
+        iterated = sorted([str(f) for f in self.classtype])
         self.assertEqual(iterated[0], "classmethod")
         self.assertEqual(iterated[1], "method")
         self.assertEqual(iterated[2], "property")
         self.assertEqual(iterated[3], "staticmethod")
 
-    def test_can_be_flattened(self):
-        flat = flatten(self.classtype)
-        self.assertEqual(sorted([str(f) for f in list(flat)]),
-                         ['classmethod', 'method', 'property', 'staticmethod'])
 
 if __name__ == '__main__':
     unittest.main()

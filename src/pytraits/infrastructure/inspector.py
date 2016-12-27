@@ -215,9 +215,8 @@ class Inspector:
         Convenience mechanism to make object identification simple.
         """
         try:
-            # TODO: Why super call does not work here?
-            return object.__getattr__(self, attr)
-        except AttributeError:
+            return self.__dict__[attr]
+        except KeyError:
             # normal way does not work, but maybe user is wanting to
             # make a direct check. To directly refer known types, the
             # attribute needs to have special prefix 'is'.

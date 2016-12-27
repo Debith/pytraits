@@ -23,6 +23,7 @@ from .hookable import Hookable
 
 __metaclass__ = type
 
+
 class ClassObject(TraitObject, Hookable):
     DEPENDENCIES = dict(_inspector="TraitSourceInspector")
     INSPECTORS = ('source', 'target')
@@ -32,7 +33,7 @@ class ClassObject(TraitObject, Hookable):
         # TODO: Inspector should not be singleton
         for name, object in self.items():
             try:
-                sub = self._inspector().inspect(object)
+                sub = self._inspector.inspect(object)
             except TypeError:
                 sub = None
 
