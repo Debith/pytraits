@@ -13,7 +13,8 @@
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
                 "RedirectOutput"
-            ]
+            ],
+            "env": {"PYTHONPATH":"${workspaceRoot}/src"}
         },
         {
             "name": "pytraits for Python 3.5",
@@ -79,7 +80,8 @@
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
                 "RedirectOutput"
-            ]
+            ],
+            "env": {"PYTHONPATH":"${workspaceRoot}/src"}
         },
         {
             "name": "Integrated Terminal/Console",
@@ -93,7 +95,8 @@
             "debugOptions": [
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit"
-            ]
+            ],
+            "env": {"PYTHONPATH":"${workspaceRoot}/src"}
         },
         {
             "name": "External Terminal/Console",
@@ -107,7 +110,8 @@
             "debugOptions": [
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit"
-            ]
+            ],
+            "env": {"PYTHONPATH":"${workspaceRoot}/src"}
         },
         {
             "name": "Django",

@@ -29,7 +29,6 @@ class ClassObject(TraitObject, Hookable):
     INSPECTORS = ('source', 'target')
 
     def __iter__(self):
-        """ Yields each element in the class. """
         # TODO: Inspector should not be singleton
         for name, object in self.items():
             try:

@@ -2,17 +2,18 @@
 #!/usr/bin/python -tt
 from pytraits.domain.shared.factory import TraitFactory
 from pytraits.domain.shared.inspectors import TraitSourceInspector, TraitTargetInspector
+from pytraits.infrastructure.exception import TraitException
 
 # TODO: Look how to make this automatic
 from pytraits.domain.model.class_object import ClassObject
 from pytraits.domain.model.instance_object import InstanceObject
 from pytraits.domain.model.property_object import PropertyObject
 from pytraits.domain.model.routine_object import (FunctionObject,
-                                                       RoutineObject,
-                                                       MethodObject,
-                                                       ClassMethodObject,
-                                                       StaticMethodObject,
-                                                       BuiltinObject)
+                                                  RoutineObject,
+                                                  MethodObject,
+                                                  ClassMethodObject,
+                                                  StaticMethodObject,
+                                                  BuiltinObject)
 from pytraits.domain.model.resolutions import Resolutions
 
 from pytraits.domain.services.compiler import Compiler
@@ -34,8 +35,6 @@ PRIMITIVES = (ClassObject,
 
 INJECTANBLES = PRIMITIVES + (Traits, RoutineObject)
 
-class DomainError(Exception): pass
-
 if not TraitFactory().exists(Traits):
     # TODO: Refactor to be more automatic
     # TODO: Injecting should know difference between factory and service, so that no need
@@ -55,7 +54,7 @@ if not TraitFactory().exists(Traits):
                 setattr(injectable, name, factory[dep]())
             except:
                 print(factory[dep])
-                raise DomainError("Error when injecting '%s' dependency to '%s'" % (dep, injectable))
+                raise TraitException("Error when injecting '%s' dependency to '%s'" % (dep, injectable))
 
 
 __all__ = ["TraitFactory"]

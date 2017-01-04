@@ -20,14 +20,16 @@ from __future__ import absolute_import, division, print_function
 import inspect
 
 from pytraits.domain.shared.trait_object import TraitObject
+from pytraits.infrastructure.exception import TraitException
 from pytraits.infrastructure.utils import flatten, is_container
 from pytraits.infrastructure.inspector import inspector
 
 __metaclass__ = type
 
 # TODO: Classify?
-class FirstTraitArgumentError(Exception): pass
-class TraitArgumentTypeError(Exception): pass
+class FirstTraitArgumentError(TraitException): pass
+class TraitArgumentTypeError(TraitException): pass
+
 
 class Traits(TraitObject):
     DEPENDENCIES = dict(_composer="Composer", _inspector="TraitSourceInspector")

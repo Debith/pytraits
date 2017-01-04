@@ -19,6 +19,8 @@
 from __future__ import absolute_import, division, print_function
 
 from pytraits.infrastructure.magic import meta_make
+from pytraits.infrastructure.exception import TraitException
+
 
 __metaclass__ = type
 
@@ -58,7 +60,7 @@ class Composer:
                              targetqname=target.qualname,
                              source=str(source),
                              sourceqname=source.qualname)
-            raise TypeError(msg)
+            raise TraitException(msg)
 
 
 class ComposerMeta(type):

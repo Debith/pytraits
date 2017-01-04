@@ -20,6 +20,7 @@ from __future__ import absolute_import, division, print_function
 import inspect
 
 from pytraits.trait_composer import add_traits
+from pytraits.infrastructure.exception import TraitException
 
 __metaclass__ = type
 __all__ = ["setproperty"]
@@ -73,7 +74,7 @@ def setproperty(target, fget=None, fset=None, fdel=None, source=None, name=None)
 
     # There must be at least one argument
     if not args:
-        raise TypeError("Property needs to have at least one function.")
+        raise TraitException("Property needs to have at least one function.")
 
     # Handle case, when all provided arguments are strings.
     elif all(isinstance(arg, str) for arg in args):
@@ -91,7 +92,7 @@ def setproperty(target, fget=None, fset=None, fdel=None, source=None, name=None)
 
     # Other conditions are not supported.
     else:
-        raise TypeError("Unsupported setup for property functions!")
+        raise TraitException("Unsupported setup for property functions!")
 
     add_traits(target, new_property, **resolutions)
 

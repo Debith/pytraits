@@ -19,13 +19,15 @@
 from __future__ import absolute_import, division, print_function
 import inspect
 
+from pytraits.infrastructure.exception import TraitException
 from pytraits.infrastructure.singleton import Singleton
 from pytraits.infrastructure.magic import meta_make
 
 __metaclass__ = type
 __all__ = ["Factory"]
 
-class FactoryError(Exception): pass
+
+class FactoryError(TraitException): pass
 class FactoryRegisterError(FactoryError): pass
 class FactoryClassMissingError(FactoryError): pass
 

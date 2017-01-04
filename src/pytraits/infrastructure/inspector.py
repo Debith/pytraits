@@ -23,6 +23,10 @@ import sys
 import inspect
 from collections import OrderedDict as odict
 
+from pytraits.infrastructure.exception import TraitException
+
+class InspectorError(TraitException): pass
+
 __metaclass__ = type
 __all__ = ["Inspector"]
 
@@ -217,16 +221,16 @@ class Inspector:
         try:
             return self.__dict__[attr]
         except KeyError:
-            # normal way does not work, but maybe user is wanting to
+            # Normal way does not work, but maybe user is wanting to
             # make a direct check. To directly refer known types, the
             # attribute needs to have special prefix 'is'.
             if not attr.startswith("is_"):
-                raise
+                raise InspectorError()
 
             typename = attr[3:]
 
             if typename not in self.typenames:
-                raise TypeError("Unidentified type '%s'" % typename)
+                raise InspectorError("Unidentified type '%s'" % typename)
 
             return lambda obj: self.inspect(obj) == typename
 
@@ -280,7 +284,7 @@ class Inspector:
             return self.__default_hook(object)
 
         type_name = getattr(object, "__name__", object.__class__.__name__)
-        raise TypeError("Could not identify object '%s' from list: %s" % (type_name, self.typenames))
+        raise InspectorError("Could not identify object '%s' from list: %s" % (type_name, self.typenames))
 
     def add_typecheck(self, name, callable=None):
         """ Adds typecheck for given name.
@@ -302,7 +306,7 @@ class Inspector:
             ValueError when there already is a custom type check for given name.
         """
         if name in self.__custom_types:
-            raise ValueError("Type '{}' already exists".format(name))
+            raise InspectorError("Type '{}' already exists".format(name))
         self.__custom_types[name] = callable or self.TYPES[name]
 
     def del_typecheck(self, name):
