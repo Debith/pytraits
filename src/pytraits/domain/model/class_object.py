@@ -19,6 +19,7 @@
 from __future__ import absolute_import, division, print_function
 from pytraits.infrastructure.utils import is_sysname
 from pytraits.domain.shared.trait_object import TraitObject
+from pytraits.infrastructure.inspector import InspectorError
 from .hookable import Hookable
 
 __metaclass__ = type
@@ -33,7 +34,7 @@ class ClassObject(TraitObject, Hookable):
         for name, object in self.items():
             try:
                 sub = self._inspector.inspect(object)
-            except TypeError:
+            except InspectorError:
                 sub = None
 
             if sub:

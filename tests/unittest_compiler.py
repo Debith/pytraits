@@ -7,7 +7,7 @@ import unittest
 from utils import for_examples
 
 from pytraits.infrastructure.utils import get_func_name
-from pytraits.domain.composing.compiler import Compiler
+from pytraits.domain.services.compiler import Compiler
 
 __metaclass__ = type
 

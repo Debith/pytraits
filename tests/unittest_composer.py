@@ -7,8 +7,8 @@ import unittest
 from utils import for_examples
 
 from pytraits.infrastructure.utils import get_func_name
-from pytraits.domain.composing.composer import BasicComposer
-from pytraits.domain.composing.resolutions import Resolutions
+from pytraits.domain.services.composer import BasicComposer
+from pytraits.domain.model.resolutions import Resolutions
 
 __metaclass__ = type
 

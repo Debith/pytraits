@@ -4,9 +4,9 @@
 from __future__ import absolute_import, division, print_function
 import unittest
 
-from pytraits.domain.composing.traits import (Traits,
-                                              FirstTraitArgumentError,
-                                              TraitArgumentTypeError)
+from pytraits.domain.services.traits import (Traits,
+                                             FirstTraitArgumentError,
+                                             TraitArgumentTypeError)
 
 __metaclass__ = type
 
