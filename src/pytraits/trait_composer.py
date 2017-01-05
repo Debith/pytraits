@@ -50,14 +50,11 @@ def add_traits(target, *traits, **resolutions):
     # TODO: DI here
     trait_target = TraitFactory["TraitTargetInspector"]().inspect(target)
     trait_resolutions = TraitFactory["Resolutions"](resolutions)
-
-    # Just prepare object to start the work and get done with it.
     trait_collection = TraitFactory["Traits"](traits)
+    composer = TraitFactory["Composer"]()
 
-    # This call puts all gears moving. Each trait in turn is being added
-    # to target object. Resolutions are used to solve any conflicts along
-    # the way.
-    trait_collection.compose(trait_target, trait_resolutions)
+    for trait_source in trait_collection:
+        composer[trait_target, trait_source](trait_resolutions)
 
 
 if __name__ == '__main__':

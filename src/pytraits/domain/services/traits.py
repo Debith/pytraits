@@ -96,7 +96,3 @@ class Traits(TraitObject):
         for trait in flatten(map(self._inspector.inspect, self.__traits)):
             yield trait
 
-    def compose(self, target, resolutions):
-        """ Compose trait sources to target using composer. """
-        for source in self:
-            self._composer(target, source).compose(resolutions)
