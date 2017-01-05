@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"time",
+				"timeit"
+			],
+			[
+				"Test",
+				"TestDummy"
+			],
+			[
+				"can",
+				"candidate"
+			],
+			[
+				"ex",
+				"expected_result"
+			],
+			[
+				"Tr",
+				"TraitFactory"
+			],
+			[
+				"cl",
+				"classtype"
+			],
+			[
+				"Fa",
+				"FactoryClassMissingError"
+			],
+			[
+				"Sin",
+				"Singleton"
+			],
+			[
+				"Tra",
+				"TraitFactory"
+			],
+			[
+				"Trai",
+				"TraitSource"
+			],
+			[
+				"Fac",
+				"FactoryError"
+			],
+			[
 				"ins",
 				"inspector"
 			],
@@ -168,10 +212,6 @@
 				"ExampleCallable"
 			],
 			[
-				"ex",
-				"extendable"
-			],
-			[
 				"fla",
 				"flatten"
 			],
@@ -232,16 +272,8 @@
 				"module_name"
 			],
 			[
-				"Tra",
-				"TraitSourceInspector"
-			],
-			[
 				"hook",
 				"hook_clazz"
-			],
-			[
-				"Trai",
-				"TraitInspector"
 			],
 			[
 				"type",
@@ -278,10 +310,6 @@
 			[
 				"metho",
 				"method_type"
-			],
-			[
-				"Test",
-				"TestClass8"
 			],
 			[
 				"cla",
@@ -388,14 +416,6 @@
 				"assertRaises"
 			],
 			[
-				"Tr",
-				"TraitTarget"
-			],
-			[
-				"Fa",
-				"Factory"
-			],
-			[
 				"asser",
 				"assertEqual"
 			],
@@ -494,100 +514,16 @@
 			[
 				"Ke",
 				"KeyError"
-			],
-			[
-				"clas",
-				"classmethod"
-			],
-			[
-				"isdata",
-				"isdatatype"
-			],
-			[
-				"TYP",
-				"TYPES"
-			],
-			[
-				"TY",
-				"TYPES"
-			],
-			[
-				"test_attr_p",
-				"test_attr_pub"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "examples/class_is_composed_from_cherrypicked_method_in_class.py",
+			"file": "examples/function_is_composed_as_a_part_of_instance.py",
 			"settings":
 			{
-				"buffer_size": 2018,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/pytraits/core/factory.py",
-			"settings":
-			{
-				"buffer_size": 5916,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/pytraits/domain/base/__init__.py",
-			"settings":
-			{
-				"buffer_size": 997,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/pytraits/core/magic.py",
-			"settings":
-			{
-				"buffer_size": 2601,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/pytraits/core/inspector.py",
-			"settings":
-			{
-				"buffer_size": 11908,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/pytraits/core/singleton.py",
-			"settings":
-			{
-				"buffer_size": 1512,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 88 files for \"super\"\n\nC:\\Users\\teppo\\Documents\\Projects\\pytraits\\LICENSE:\n  132        by You to the Licensor shall be under the terms and conditions of\n  133        this License, without any additional terms or conditions.\n  134:       Notwithstanding the above, nothing herein shall supersede or modify\n  135        the terms of any separate license agreement you may have executed\n  136        with Licensor regarding such Contributions.\n\nC:\\Users\\teppo\\Documents\\Projects\\pytraits\\src\\pytraits\\core\\factory.py:\n   34          if cls is Factory:\n   35              raise errors.FactoryError()\n   36:         return super(FactoryMeta, cls).__call__(*args, **kwargs)\n   37  \n   38  \n\nC:\\Users\\teppo\\Documents\\Projects\\pytraits\\src\\pytraits\\core\\inspector.py:\n  182          \"\"\"\n  183          try:\n  184:             return super(Inspector, self).__getattr__(attr)\n  185          except AttributeError:\n  186              # normal way does not work, but maybe user is wanting to\n\nC:\\Users\\teppo\\Documents\\Projects\\pytraits\\src\\pytraits\\core\\singleton.py:\n   33                  raise SingletonError('Singletons are immutable!')\n   34  \n   35:             self.__instance = super(Singleton, self).__call__(*args, **kwargs)\n   36              self.__delitem__ = raise_immutable_exception\n   37              self.__delattr__ = raise_immutable_exception\n\nC:\\Users\\teppo\\Documents\\Projects\\pytraits\\src\\pytraits\\domain\\composing\\composer.py:\n   82          initialize the composer object.\n   83          \"\"\"\n   84:         instance = super(ComposerMeta, cls).__call__()\n   85          instance.target = target\n   86          instance.source = source\n\n5 matches across 5 files\n",
-			"settings":
-			{
-				"buffer_size": 1682,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "src/pytraits/core/utils.py",
-			"settings":
-			{
-				"buffer_size": 3860,
+				"buffer_size": 1734,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -652,10 +588,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "Snippet: ",
+		"height": 291.0,
+		"last_filter": "Package Control: ins",
 		"selected_items":
 		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
 			[
 				"Snippet: ",
 				"Snippet: angular-directive"
@@ -685,13 +633,14 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 424.0
+		"width": 800.0
 	},
 	"console":
 	{
 		"height": 247.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
 			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
 		]
 	},
@@ -706,48 +655,120 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/teppo/Documents/Projects/pytraits",
-		"/C/Users/teppo/Documents/Projects/pytraits/src",
+		"/C/Users/teppo/Documents/Projects/pytraits/docs/uml",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/base",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/support",
-		"/C/Users/teppo/Documents/Projects/pytraits/tests"
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/services",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/shared",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/infrastructure"
 	],
 	"file_history":
 	[
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/inspector.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/factory.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/tests/playground.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/composer.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/singleton.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/traits.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/magic.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/__init__.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/__init__.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/trait_composer.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/combiner.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/__init__.py",
+		"/C/Users/teppo/Documents/Projects/dnd5e/data/gamedata/players/ossi-1.json",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/class_is_composed_from_other_class.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model/class_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model/hookable.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model/instance_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model/property_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model/resolutions.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/__init__.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/compiler.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/resolutions.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_classobject.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/combiner.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model/routine_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/services/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/services/compiler.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/services/composer.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/services/traits.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/shared/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/shared/factory.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/shared/inspectors.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/shared/trait_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/extendable.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/infrastructure/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/infrastructure/factory.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/infrastructure/inspector.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/infrastructure/magic.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/infrastructure/singleton.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/infrastructure/utils.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/setproperty.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/trait_composer.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/tests/utils.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/instance_is_composed_from_cherrypicked_property_in_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/composition_in_alternative_syntax.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/extendable_function_class_vs_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/function_is_composed_as_a_part_of_class.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/function_is_composed_as_a_part_of_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/instance_is_composed_from_cherrypicked_method_in_class.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/instance_is_composed_from_cherrypicked_methods_with_rename.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/instance_is_composed_from_cherrypicked_property_in_class.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/instance_is_composed_from_other_class.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/instance_is_composed_from_other_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/multiple_traits_composed_into_new_class.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/property_is_created_into_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/pyqt_builtins_composed_into_class.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/pyqt_builtins_composed_into_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/class_is_composed_from_other_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/class_is_composed_from_cherrypicked_property_in_class.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/class_is_composed_from_cherrypicked_property_in_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/class_is_composed_from_cherrypicked_method_in_instance.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/examples/class_is_composed_from_cherrypicked_methods_with_rename.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/infrastructure/<doctest __main__.Inspector[1]>",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/__init__.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/examples/class_is_composed_from_cherrypicked_method_in_class.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/base/__init__.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/base/inspectors.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/__init__.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/class_object.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/instance_object.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/routine_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/model/trait_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_classobject.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_compiler.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_traits.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_factory.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_composer.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_composing.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_inspector.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_singleton.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/docs/uml/composing.puml",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/inspector.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/services/binder.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/docs/contributing.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/docs/changelog.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/CONTRIBUTING.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/CHANGELOG.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/AUTHORS.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/docs/conf.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/docs/index.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/docs/installation.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/docs/readme.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/README.rst",
+		"/C/Users/teppo/Documents/Projects/pytraits/setup.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/utils.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/traits.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/factory.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/ci/bootstrap.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/tests/testdata.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/trait_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/routine_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/property_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/instance_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/class_object.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/composer.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/resolutions.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/base/inspectors.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/base/factory.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/singleton.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/magic.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_traits.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_factory.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/compiler.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/base/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/composing/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/primitives/unidentified_object.py",
+		"/C/Users/teppo/Documents/Projects/py3traits/src/pytraits/core/base/inspectors.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/pytraits.sublime-project",
+		"/C/Users/teppo/Documents/Projects/py3traits/src/pytraits/core/base/__init__.py",
+		"/C/Users/teppo/Documents/Projects/py3traits/src/pytraits/core/__init__.py",
+		"/C/Users/teppo/Documents/Projects/pytraits/tests/playground.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/tests/unittest_typeconverted.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/domain/inspectors.py",
-		"/C/Users/teppo/Documents/Projects/py3traits/src/pytraits/core/base/__init__.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/base/__init__.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/base/factory.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/base/inspectors.py",
@@ -759,14 +780,11 @@
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/base/inspectors.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/support/utils.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/base/errors.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/pytraits.sublime-project",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/support/<doctest __main__.Inspector.__getitem__[0]>",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/support/errors.py",
-		"/C/Users/teppo/Documents/Projects/pytraits/CHANGELOG.rst",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/base/__init__.py",
 		"/C/Users/teppo/Documents/Projects/pytraits/src/pytraits/core/composing/composer.py",
 		"/C/Users/teppo/Documents/Projects/py3traits/src/pytraits/support/inspector.py",
-		"/C/Users/teppo/Documents/Projects/py3traits/src/pytraits/core/base/inspectors.py",
 		"/C/Users/teppo/Documents/Projects/py3traits/src/pytraits/core/base/py_compatibility.py",
 		"/C/Users/teppo/Documents/Projects/py3traits/AUTHORS.rst",
 		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/haclient.cpp",
@@ -775,84 +793,15 @@
 		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/HAClient.hpp",
 		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/MemoryBookmarkStore.hpp",
 		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/raw_wrapper.cpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/HAClientImpl.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/client_docs.h",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/bookmarkstore.cpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/include/bookmarkstore.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/client.cpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/src/client.c",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/amps.h",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/MMapBookmarkStore.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/MessageRouter.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/MemorySubscriptionManager.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/util.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/ServerChooserImpl.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/DefaultServerChooser.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/amps_impl.h",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/include/ampspy_types.hpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/src/transports.c",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/src/tcp.c",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/ServerChooser.hpp",
-		"/C/Users/teppo/Documents/gimp_scripts.py",
-		"/C/Users/teppo/Documents/Projects/py3traits/tests/utils.py",
-		"/C/Users/teppo/Documents/Projects/py3traits/tests/unittest_typesafe.py",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/memorypublishstore.cpp",
-		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/authenticator.cpp",
-		"/C/Users/teppo/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/teppo/OneDrive/Documents/Retrotemplate",
-		"/C/Users/teppo/.ssh/id_rsa.pub",
-		"/C/Users/teppo/Documents/Projects/reaction/tests/test_game.py",
-		"/C/Users/teppo/Documents/Projects/reaction/reaction.sublime-project",
-		"//DebithNAS/teppo/Movies/Star Trek Into Darkness.mkv",
-		"//DebithNAS/teppo/Movies/Star Wars - The Force Awakens.mkv",
-		"//DebithNAS/teppo/Movies/Interstellar.mkv",
-		"//DebithNAS/teppo/Movies/Life of Pi.mkv",
-		"//DebithNAS/teppo/Movies/Mad Max Fury Road.mkv",
-		"//DebithNAS/teppo/Movies/Man of Steel.chinese.srt",
-		"//DebithNAS/teppo/Movies/Man of Steel.mkv",
-		"//DebithNAS/teppo/Movies/Oblivion.mkv",
-		"//DebithNAS/teppo/Movies/RoboCop.mkv",
-		"//DebithNAS/teppo/Movies/Sherlock Holmes.mkv",
-		"//DebithNAS/teppo/Movies/Penguins of Madagascar.mkv",
-		"//DebithNAS/teppo/Movies/Rise of the Planet of the Apes.mkv",
-		"//DebithNAS/teppo/Movies/Rio.mkv",
-		"//DebithNAS/teppo/Movies/Predators.mkv",
-		"//DebithNAS/teppo/Movies/Prometheus.mkv",
-		"//DebithNAS/teppo/Movies/Raiders of the Lost Ark .mkv",
-		"//DebithNAS/teppo/Movies/Rio 2.mkv",
-		"//DebithNAS/teppo/Movies/Iron Man 2.mkv",
-		"//DebithNAS/teppo/Movies/Inglourious Basterds.mkv",
-		"//DebithNAS/teppo/Movies/Indiana Jones and the Temple of Doom.mkv",
-		"//DebithNAS/teppo/Movies/Indiana Jones and the Last Crusade.mkv",
-		"//DebithNAS/teppo/Movies/Hunger Games - Mocking Jay Part 1.mkv",
-		"//DebithNAS/teppo/Movies/Gravity.mkv",
-		"//DebithNAS/teppo/Movies/Guardians of the Galaxy.mkv",
-		"//DebithNAS/teppo/Movies/Elysium.mkv",
-		"//DebithNAS/teppo/Movies/Frozen.mkv",
-		"//DebithNAS/teppo/Movies/Gravity.chinese.srt",
-		"//DebithNAS/teppo/Movies/Edge of Tomorrow - Live, Die, Repeat.mkv",
-		"//DebithNAS/teppo/Movies/After Earth.mkv",
-		"//DebithNAS/teppo/Movies/Edge of Tomorrow - Live, Die, Repeat.chinese.srt",
-		"//DebithNAS/teppo/Movies/Django Unchained.mkv",
-		"//DebithNAS/teppo/Movies/Alien vs Predator.mkv",
-		"//DebithNAS/teppo/Movies/Constantine.mkv",
-		"//DebithNAS/teppo/Movies/Cloud Atlas.mkv",
-		"//DebithNAS/teppo/Movies/Chronicles of Riddick.mkv",
-		"//DebithNAS/teppo/Movies/Alien vs Predator Requiem.mkv",
-		"//DebithNAS/teppo/Movies/X-Men_Origins_Wolverine_t00.mkv",
-		"//DebithNAS/teppo/Movies/X-Men - First Class.mkv",
-		"//DebithNAS/teppo/Movies/Transformers 4 - Age of Extinction.mkv",
-		"//DebithNAS/teppo/Movies/X-Men - First Class.chinese.srt",
-		"//DebithNAS/teppo/Movies/Terminator 3 - Rise of the Machines.mkv",
-		"//DebithNAS/teppo/Movies/Transformers 4 - Age of Extinction.chinese.srt"
+		"/C/Users/teppo/Downloads/amps-python-client-5.0.1.2/src/cpp/include/HAClientImpl.hpp"
 	],
 	"find":
 	{
-		"height": 50.0
+		"height": 64.0
 	},
 	"find_in_files":
 	{
-		"height": 102.0,
+		"height": 193.0,
 		"where_history":
 		[
 			"C:\\Users\\teppo\\Documents\\Projects\\pytraits",
@@ -893,6 +842,55 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"due to",
+			"2014-2015",
+			"__compiler",
+			"__inspector",
+			"inspector(",
+			"primitive",
+			"TraitObject",
+			".core",
+			"composing",
+			"primitives.",
+			".primitives.",
+			"primitives",
+			".base",
+			".base.",
+			"py3traits",
+			"traits",
+			"Traits",
+			"traits",
+			", unicode_literals",
+			"No strings",
+			"version_info",
+			"object",
+			"print(",
+			"Object",
+			"object",
+			"Object",
+			"object",
+			"Object",
+			"object",
+			"Object",
+			"class_method",
+			"add_default_hook",
+			"TraitFactory",
+			"get_func_name",
+			"One",
+			"TraitFactory",
+			"resolutions",
+			"Resolutions",
+			"resolutions",
+			"Resolutions",
+			"ComposerMeta.rebuild",
+			"@type_safe",
+			"print(dir",
+			"singleton",
+			"Singleton",
+			"is_sysname",
+			"filename",
+			"errors.",
+			"TraitObject",
 			"type_name",
 			"super",
 			"TYPENAMES",
@@ -971,56 +969,7 @@
 			"AlreadyConnected",
 			"connectAndLogon",
 			"removeRoute",
-			"unsubscribeInternal",
-			"unsubscribe",
-			"no_store",
-			"HAClientImpl",
-			"HAClient",
-			"SubscriptionManager",
-			"reset(",
-			"reset(S",
-			"reset",
-			"subscriptionManager",
-			"SubscriptionManager",
-			"setSubscriptionManager",
-			"SubscriptionManager",
-			"resubscribe",
-			"getMostRecent",
-			"resubscribe",
-			"AMPS_UNHANDLED_EXCEPTION_2",
-			"PyErr_PrintEx",
-			"unhandled_exception",
-			"exceptionThrown",
-			"AMPS_UNHANDLED_EXCEPTION_2",
-			"InterlockedExchangeAdd64",
-			"AMPS_FETCH_SUB",
-			"AMPS_UNHANDLED_EXCEPTION_2",
-			"broadcastConnectionStateChanged",
-			"resubscribe",
-			"subscribe",
-			"broadcast",
-			"DefaultServerChooser",
-			"RefBody",
-			"ServerChooserImpl",
-			"ServerChooser",
-			"connectAndLogon",
-			"connect(",
-			"ClientImpl::connect",
-			"ClientImpl",
-			"connectAndLogon",
-			"logon",
-			"connect",
-			"broadcastConnectionStateChanged",
-			"connectionStateListeners",
-			"addConnectionStateListener",
-			"connectionStateListeners",
-			"connection_state_listener",
-			"callbacks",
-			"connected",
-			"DefaultServerChooser",
-			"getServerChooser",
-			"_serverChooser",
-			"getCurrentAuthenticator"
+			"unsubscribeInternal"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1028,6 +977,13 @@
 		"regex": false,
 		"replace_history":
 		[
+			"2014-2017",
+			"Hookable",
+			".infrastructure",
+			".shared",
+			".shared.",
+			"pytraits",
+			"",
 			"domain.base import TraitFactory",
 			"pytraits.coepytraits.core",
 			"pytraits.coe",
@@ -1081,24 +1037,32 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "examples/class_is_composed_from_cherrypicked_method_in_class.py",
+					"file": "examples/function_is_composed_as_a_part_of_instance.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2018,
+						"buffer_size": 1734,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1473,
+								1473
+							],
+							[
+								1597,
+								1597
+							],
+							[
+								1713,
+								1713
 							]
 						],
 						"settings":
@@ -1108,253 +1072,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 331.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/pytraits/core/factory.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5916,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3735,
-								3735
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3304.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/pytraits/domain/base/__init__.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								903,
-								903
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 404.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/pytraits/core/magic.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2601,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2060,
-								2060
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1255.0,
+						"translation.y": 833.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/pytraits/core/inspector.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11908,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4831,
-								4838
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3168.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/pytraits/core/singleton.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1512,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 396.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1682,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										295,
-										300
-									],
-									[
-										628,
-										633
-									],
-									[
-										835,
-										840
-									],
-									[
-										1184,
-										1189
-									],
-									[
-										1540,
-										1545
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/pytraits/core/utils.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3860,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								745,
-								755
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 354.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -1362,11 +1083,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 35.0
+		"height": 44.0
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 60.0
 	},
 	"layout":
 	{
@@ -1393,17 +1114,17 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 273.0
+		"height": 358.0
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "Python 2.7 - traits",
+	"pinned_build_system": "Python 3.5 - traits",
 	"project": "pytraits.sublime-project",
 	"replace":
 	{
-		"height": 94.0
+		"height": 84.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1721,7 +1442,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 426.0,
+	"side_bar_width": 654.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

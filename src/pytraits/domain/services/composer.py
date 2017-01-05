@@ -1,7 +1,7 @@
 #!/usr/bin/python -tt
 # -*- coding: utf-8 -*-
 '''
-   Copyright 2014-2015 Teppo Perä
+   Copyright 2017 Teppo Perä
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

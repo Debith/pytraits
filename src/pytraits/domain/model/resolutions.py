@@ -1,7 +1,7 @@
 #!/usr/bin/python -tt
 # -*- coding: utf-8 -*-
 '''
-   Copyright 2014-2015 Teppo Perä
+   Copyright 2014-2017 Teppo Perä
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -45,6 +45,7 @@ class Resolutions:
             Error if there is a conflict but no resolution.
         """
         return self.__resolutions.get(name, name)
+
 
 if __name__ == "__main__":
     import doctest

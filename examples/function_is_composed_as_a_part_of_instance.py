@@ -45,8 +45,8 @@ assert example_instance.new_class_function() == (24, 25, 26),\
 assert example_instance.new_method() == (42, 43, 44),\
     "Instance composition fails with instance method!"
 assert not hasattr(ExampleClass, "new_static_function"),\
-    "Instance composition fails due to class has changed!"
+    "Instance composition fails since original class has changed!"
 assert not hasattr(ExampleClass, "new_class_function"),\
-    "Instance composition fails due to class has changed!"
+    "Instance composition fails since original class has changed!"
 assert not hasattr(ExampleClass, "new_method"),\
-    "Instance composition fails due to class has changed!"
+    "Instance composition fails since original class has changed!"
