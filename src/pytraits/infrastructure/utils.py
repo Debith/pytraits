@@ -128,6 +128,25 @@ def get_func_name(routine, fullname=True):
         function = getattr(routine, '__func__', routine)
         return function.__name__
 
+
+def hasattrs(object, *attrs):
+    """
+    Lightweight mechanism to check whether attributes exist in the given object.
+
+    >>> class Test:
+    ...     first = 1
+    ...     def __init__(self):
+    ...         self.second = 2
+    >>> hasattrs(Test(), "first", "second")
+    True
+    """
+    for attr in attrs:
+        if not hasattr(object, attr):
+            return False
+    return True
+
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()

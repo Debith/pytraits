@@ -19,7 +19,6 @@
 from __future__ import absolute_import, division, print_function
 
 from pytraits.infrastructure.utils import is_container
-from pytraits.infrastructure.exception import TraitException
 from pytraits.domain.shared.trait_object import TraitObject
 
 
@@ -64,6 +63,9 @@ class Composer:
         self._target = keys[0]
         self._source = keys[1]
 
+        assert isinstance(self._target, TraitObject)
+        assert isinstance(self._source, TraitObject)
+
         return self._rules[str(self._target), str(self._source)]
 
     def _compose(self, resolutions):
@@ -78,7 +80,6 @@ class Composer:
         bound = self._source.rebind(self._target, compiled)
         self._target[name] = bound
         assert hasattr(self._target.object, name)
-
 
     def _compose_property_to_instance(self, resolutions):
         """ Composes property trait to instance target.
